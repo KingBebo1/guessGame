@@ -7,7 +7,7 @@ function Game(){
     let [counter, setCounter] = useState(0);
 
     const lessThan = () => {
-        if(counter >= 10 || aiGuess <= 1 || aiGuess > 1000){
+        if(counter >= 10 || aiGuess <= 1){
             window.alert("CHEATER! Press refresh to restart WITHOUT CHEATING")
         }else{
             setAiGuess(aiGuess - power)
@@ -21,7 +21,7 @@ function Game(){
     }
 
     const greaterThan = () => {
-        if(counter >= 10 || aiGuess <= 1 || aiGuess >= 1000){
+        if(counter >= 10 || aiGuess >= 1000){
             window.alert("CHEATER! Press refresh to restart WITHOUT CHEATING!")
         }
         else{
