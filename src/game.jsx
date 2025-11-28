@@ -6,8 +6,12 @@ function Game(){
     let [power, setPower] = useState(256);
     let [counter, setCounter] = useState(0);
 
+    const handleRefresh = () => {
+        window.location.reload(true);
+    }
+
     const lessThan = () => {
-        if(counter >= 10 || aiGuess <= 1){
+        if(counter >= 9 || aiGuess <= 1){
             window.alert("CHEATER! Press refresh to restart WITHOUT CHEATING")
         }else{
             setAiGuess(aiGuess - power)
@@ -17,11 +21,12 @@ function Game(){
     }
 
     const exactly = () => {
-        window.alert(`The computer guessed your number is ${counter} attemps, Press refresh to try again`)
+        window.alert(`The computer guessed your number is ${counter} attemps`)
+        handleRefresh()
     }
 
     const greaterThan = () => {
-        if(counter >= 10 || aiGuess >= 1000){
+        if(counter >= 9 || aiGuess >= 1000){
             window.alert("CHEATER! Press refresh to restart WITHOUT CHEATING!")
         }
         else{
