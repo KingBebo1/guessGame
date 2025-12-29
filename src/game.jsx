@@ -45,7 +45,9 @@ function Game(){
             <button className="button" onClick={lessThan}>Less Than</button>
             <button className="button" onClick={exactly}>Exactly</button>
             <button className="button" onClick={greaterThan}>Greater Than</button>
-        </div>
+        </div><br /><br />
+
+        <button onClick={handleRefresh}>Reset</button>
         
         </>
     )
